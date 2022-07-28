@@ -1,0 +1,65 @@
+.banners {
+    align-items: center;
+    display: flex;
+    padding-top: 9.7rem;
+}
+
+.banner-slider {
+    display: flex;
+    position: relative;
+}
+
+.banner-slider_item {
+    flex-shrink: 0;
+    margin: 0 1rem 3rem;
+    width: 90%;
+}
+
+.banner-slider_link {
+    display: block;
+    position: relative;
+}
+
+.banner-slider_link::before {
+    border: 0.2rem solid rgb(255, 255, 255, 0);
+    border-radius: 0.5rem;
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: 0.3s;
+}
+
+.banner-slider_link:hover::before {   
+    border-color: rgb(255, 255, 255, 0.7);
+}
+
+.banner-slider_cover {
+    border-radius: 0.5rem;
+    box-shadow: #000000 0rem 2rem 3rem -2rem;
+    display: block;
+    width: 100%;
+}
+
+.banner-slider_title {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.banners .arrow-slider-left {
+    left: 3.6rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.banners .arrow-slider-right {
+    right: 3.6rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.banners .controls-slider {
+    bottom: 4.6rem;
+    right: 14.6rem;
+}
