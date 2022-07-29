@@ -4,9 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Disney+</title>
 </head>
 <body>
-    
+    <div class="background-fixed"></div>
+    <div class="wrapper">
+        <header class="header" data-header>
+            <div class="logo">
+                <a class="logo_link" href="/"></a>
+            </div>
+            <nav class="header_navigation">
+                <ul class="nav-menu">
+                    <li class="nav-menu_item">
+                        <a class="nav-menu_link" href="/">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="nav-menu_text">Início</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu_item">
+                        <a class="nav-menu_link" href="/">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="nav-menu_text">Pesquisa</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu_item">
+                        <a class="nav-menu_link" href="/">
+                            <i class="fa-solid fa-plus"></i>
+                            <span class="nav-menu_text">Minha Lista</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu_item mobile-hidden">
+                        <a class="nav-menu_link" href="/">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="nav-menu_text">Originais</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu_item mobile-hidden">
+                        <a class="nav-menu_link" href="/">
+                            <i class="fa-solid fa-film"></i>
+                            <span class="nav-menu_text">Filmes</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu_item mobile-hidden">
+                        <a class="nav-menu_link" href="/">
+                            <i class="fa-solid fa-tv"></i>
+                            <span class="nav-menu_text">Séries</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu_item dropdown">
+                        <a class="nav-menu_link" href="/" data-open-navsubmenu>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                        <ul class="nav-submenu" data-navsubmenu>
+                            <li class="nav-submenu_item mobile-hidden">
+                                <a class="nav-submenu_link" href="/">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="nav-submenu_text">Originais</span>
+                                </a>
+                            </li>
+                            <li class="nav-submenu_item mobile-hidden">
+                                <a class="nav-submenu_link" href="/">
+                                    <i class="fa-solid fa-film"></i>
+                                    <span class="nav-submenu_text">Filmes</span>
+                                </a>
+                            </li>
+                            <li class="nav-submenu_item mobile-hidden">
+                                <a class="nav-submenu_link" href="/">
+                                    <i class="fa-solid fa-tv"></i>
+                                    <span class="nav-submenu_text">Séries</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="user-menu" data-usermenu>
+                    <div class="user-menu_background show-hover"></div>
+                    <div class="user-menu_current-profile" data-open-usermenu>
+                        <div class="user-profile user-profile-reverse">
+                            <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
+                            <span class="user-profile_title">Filipe</span>
+                        </div>
+                    </div>
+                    <ul class="user-menu_profiles show-hover">
+                        <li class="user-menu_item">
+                            <div class="user-profile user-profile">
+                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
+                                <span class="user-profile_title">Michael</span>
+                            </div>
+                        </li>
+                        <li class="user-menu_item">
+                            <div class="user-profile user-profile">
+                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
+                                <span class="user-profile_title">Penélope</span>
+                            </div>
+                        </li>
+                        <li class="user-menu_item">
+                            <div class="user-profile user-profile">
+                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
+                                <span class="user-profile_title">Bibi</span>
+                            </div>
+                        </li>
+                        <li class="user-menu_item">
+                            <div class="user-profile user-profile">
+                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
+                                <span class="user-profile_title">Haruk</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="user-menu_options show-hover">
+                        <li class="user-menu_item">
+                            <a class="user-menu_link" href="/">Editar Perfis</a>
+                        </li>
+                        <li class="user-menu_item">
+                            <a class="user-menu_link" href="/">Configurações do Aplicativo</a>
+                        </li>
+                        <li class="user-menu_item">
+                            <a class="user-menu_link" href="/">Conta</a>
+                        </li>
+                        <li class="user-menu_item">
+                            <a class="user-menu_link" href="/">Ajuda</a>
+                        </li>
+                        <li class="user-menu_item">
+                            <a class="user-menu_link" href="/">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="banners">
+                <button class="arrow-slider arrow-slider-left" data-banner="btn-previous"></button>
+                <button class="arrow-slider arrow-slider-right" data-banner="btn-next"></button>
+                <div class="controls-slider">
+                    <button class="controls-slider_item" data-banner="btn-control"></button>
+                    <button class="controls-slider_item" data-banner="btn-control"></button>
+                    <button class="controls-slider_item" data-banner="btn-control"></button>
+                    <button class="controls-slider_item" data-banner="btn-control"></button>
+                    <button class="controls-slider_item" data-banner="btn-control"></button>
+                    <button class="controls-slider_item" data-banner="btn-control"></button>
+                </div>
+                <div class="banner-slider" data-banner="slider">
+                    <div class="banner-slider_item" data-banner="item">
+                        <a class="banner-slider_link" href="/" >
+                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
+                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
+                        </a>
+                    </div>
+                    <div class="banner-slider_item" data-banner="item">
+                        <a class="banner-slider_link" href="/" >
+                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
+                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
+                        </a>
+                    </div>
+                    <div class="banner-slider_item" data-banner="item">
+                        <a class="banner-slider_link" href="/" >
+                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
+                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
+                        </a>
+                    </div>
+                    <div class="banner-slider_item" data-banner="item">
+                        <a class="banner-slider_link" href="/" >
+                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
+                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
+                        </a>
+                    </div>
+                    <div class="banner-slider_item" data-banner="item">
+                        <a class="banner-slider_link" href="/" >
+                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
+                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
+                        </a>
+                    </div>
+                    <div class="banner-slider_item" data-banner="item">
+                        <span class="banner-slider_counter">6</span>
+                        <a class="banner-slider_link" href="/" >
+                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
+                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>
