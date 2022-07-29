@@ -65,7 +65,7 @@ function setVisibleSlide(index) {
 
 function getCenterPosition(index) {
     const slide = sliderItens[index]
-    const margin = (window.innerWidth - slide.offsetWidth)/2
+    const margin = (document.body.clientWidth - slide.offsetWidth)/2
     const centerPosition = margin - (slide.offsetWidth * index)
     return centerPosition
 }
