@@ -105,6 +105,24 @@ function onControlButtonClick(index) {
     setVisibleSlide(index)
 }
 
+function onTouchStart(event, index) {
+    const slide = event.currentTarget
+    slide.addEventListener('touchmove', onTouchMove)
+    event.clienX = event.touches[0].clientX
+    onMouseDown(event, index)
+}
+
+function onTouchEnd(event) {
+    const slide = event.currentTarget
+    slide.removeEventListener('touchmove', onTouchMove)
+    onMouseUp(event)
+}
+
+function onTouchMove(event) {
+    event.clienX = event.touches[0].clientX
+    onMouseMove(event)
+}
+
 function setListeners(){
     btnNext.addEventListener('click', forwardSlide)
     btnPrevious.addEventListener('click', backwardSlide)
@@ -112,7 +130,6 @@ function setListeners(){
         const bannerLink = slide.querySelector('.banner-slider_link')
         bannerLink.addEventListener('click', preventDefault)
         bannerLink.addEventListener('dragstart', preventDefault)
-
         slide.addEventListener('mousedown', function(event) {
             onMouseDown(event, index)
         })
@@ -121,6 +138,17 @@ function setListeners(){
         btnControls[index].addEventListener('click', function() {
             onControlButtonClick(index)
         })
+        slide.addEventListener('touchstart', function(event) {
+            onTouchStart(event, index)
+        })
+        slide.addEventListener('touchend', onTouchEnd)
+    })
+    let resizeTimeOut;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeOut)
+        resizeTimeOut = setTimeout(function() {
+            setVisibleSlide(state.currentSlideIndex)
+        }, 1000)
     })
 }
 
