@@ -80,9 +80,10 @@ function onMouseDown(event, index) {
 
 function onMouseUp(event) {
     const slide = event.currentTarget
-    if(state.movementPosition > 150){
+    const movimentQtd = event.type.includes('touch') ? 50 : 150
+    if(state.movementPosition > movimentQtd){
         backwardSlide()
-    } else if (state.movementPosition < -150) {
+    } else if (state.movementPosition < -movimentQtd) {
         forwardSlide()
     } else {
         setVisibleSlide(state.currentSlideIndex)
@@ -108,7 +109,7 @@ function onControlButtonClick(index) {
 function onTouchStart(event, index) {
     const slide = event.currentTarget
     slide.addEventListener('touchmove', onTouchMove)
-    event.clienX = event.touches[0].clientX
+    event.clientX = event.touches[0].clientX
     onMouseDown(event, index)
 }
 
@@ -119,7 +120,7 @@ function onTouchEnd(event) {
 }
 
 function onTouchMove(event) {
-    event.clienX = event.touches[0].clientX
+    event.clientX = event.touches[0].clientX
     onMouseMove(event)
 }
 
