@@ -6,9 +6,9 @@ const userMenu = document.querySelector('[data-usermenu]')
 
 function onWindowScroll(){
     if(window.scrollY > 20){
-        header.style.backgroundColor = '#0c0d14';
+        header.style.backgroundColor = '#0c0d14'
     } else {
-        header.style.backgroundColor = 'transparent';
+        header.style.backgroundColor = 'transparent'
     }
 }
 

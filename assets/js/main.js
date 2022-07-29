@@ -1,3 +1,5 @@
-import header from './modules/header.js';
+import header from './modules/header.js'
+import bannerSlider from './modules/banner-slider.js'
 
-header.init();
+header.init()
+bannerSlider.init()
