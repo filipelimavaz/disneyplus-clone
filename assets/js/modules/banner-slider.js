@@ -54,10 +54,21 @@ function activeImageTitle(index) {
     imgTitle.classList.add('active')
 }
 
+function activeCurrentSlide() {
+    sliderItens.forEach(function(slide, slideIndex){
+        slide.classList.remove('active')
+        if(slideIndex === state.currentSlideIndex) {
+            slide.classList.add('active')
+        }
+    })
+}
+
 function setVisibleSlide(index) {
     state.currentSlideIndex = index
     slider.style.transition = 'transform 0.25s'
     const position = getCenterPosition(index)
+    activeCurrentSlide()
+    setArrowButtonsDisplay()
     translateSlide(position)
     activeBtnControlButton(index)
     activeImageTitle(index)
@@ -89,6 +100,7 @@ function onMouseUp(event) {
         setVisibleSlide(state.currentSlideIndex)
     }
     slide.removeEventListener('mousemove', onMouseMove)
+    state.movementPosition = 0
 }
 
 function onMouseLeave(event) {
@@ -124,6 +136,11 @@ function onTouchMove(event) {
     onMouseMove(event)
 }
 
+function setArrowButtonsDisplay() {
+    btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
+    btnNext.style.display = state.currentSlideIndex === (sliderItens.length - 1) ? 'none' : 'block'
+}
+
 function setListeners(){
     btnNext.addEventListener('click', forwardSlide)
     btnPrevious.addEventListener('click', backwardSlide)
@@ -154,7 +171,7 @@ function setListeners(){
 }
 
 function init() {
-    setVisibleSlide(1)
+    setVisibleSlide(0)
     setListeners()    
 }
 

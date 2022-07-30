@@ -30,7 +30,7 @@ function getLastSlideIndex() {
 }
 
 function animateTransition(active) {
-    const {carouselList } = collectionData[currentCollectionIndex]
+    const { carouselList } = collectionData[currentCollectionIndex]
     if(active) {
         carouselList.style.transition = 'transform 0.3s'
     } else {
@@ -38,10 +38,29 @@ function animateTransition(active) {
     }
 }
 
+function activeCurrentItens() {
+    const { carouselItens, state } = collectionData[currentCollectionIndex]
+    carouselItens.forEach(function(item, itemIndex){
+        item.classList.remove('active')
+        const firstItemIndex = state.currentSlideIndex * itensPerSlide
+        if(itemIndex >= firstItemIndex && itemIndex < firstItemIndex + itensPerSlide) {
+            item.classList.add('active')
+        }
+    })
+}
+
+function setArrowButtonsDisplay() {
+    const { btnPrevious, btnNext, state } = collectionData[currentCollectionIndex]
+    btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
+    btnNext.style.display = state.currentSlideIndex === getLastSlideIndex() ? 'none' : 'block'
+}
+
 function setVisibleSlide(slideIndex) {
     const { state } = collectionData[currentCollectionIndex]
     state.currentSlideIndex = slideIndex
     const centerPosition = getCenterPosition(slideIndex)
+    setArrowButtonsDisplay()
+    activeCurrentItens()
     animateTransition(true)
     translateSlide(centerPosition)
 }
@@ -87,6 +106,7 @@ function onMouseUp(event) {
     }
     const item = event.currentTarget
     item.removeEventListener('mousemove', onMouseMove)
+    state.movement = 0
 }
 
 function onMouseMove(event) {
