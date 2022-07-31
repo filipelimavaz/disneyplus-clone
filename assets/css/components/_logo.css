@@ -1,8 +1,3 @@
-.logo {
-    margin-left: 3.8rem;
-    padding-top: 1.6rem;
-}
-
 .logo_link {
     background: url(../../imgs/logo.svg) no-repeat;
     background-position: center;
@@ -13,11 +8,6 @@
 }
 
 @media screen and (max-width: 1080px){
-    .logo {
-        margin-left: 2.2rem;
-        padding-top: 2.0rem;
-    }
-
     .logo_link {
         height: 3.2rem;
         width: 5.9rem;
