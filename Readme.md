@@ -1,3 +1,5 @@
+<b>Link da minha aplicação: </b><a>https://filipelimavaz-disneyplusclone.netlify.app/</a>
+
 # Disney+ Clone
 Com este mini-projeto você poderá praticar os seus conhecimentos de HTML, CSS e Javascript recriando a página inicial da plataforma de stream Disney+ .
 
