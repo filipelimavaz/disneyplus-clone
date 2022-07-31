@@ -86,32 +86,7 @@
                             <span class="user-profile_title">Filipe</span>
                         </div>
                     </div>
-                    <ul class="user-menu_profiles show-hover">
-                        <li class="user-menu_item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
-                                <span class="user-profile_title">Michael</span>
-                            </div>
-                        </li>
-                        <li class="user-menu_item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
-                                <span class="user-profile_title">Penélope</span>
-                            </div>
-                        </li>
-                        <li class="user-menu_item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
-                                <span class="user-profile_title">Bibi</span>
-                            </div>
-                        </li>
-                        <li class="user-menu_item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile_avatar" src="./assets/imgs/avatar.png" />
-                                <span class="user-profile_title">Haruk</span>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul class="user-menu_profiles show-hover" data-usermenu="user-profiles"></ul>
                     <ul class="user-menu_options show-hover">
                         <li class="user-menu_item">
                             <a class="user-menu_link" href="/">Editar Perfis</a>
@@ -136,56 +111,87 @@
             <section class="banners">
                 <button class="arrow-slider arrow-slider-left" data-banner="btn-previous"></button>
                 <button class="arrow-slider arrow-slider-right" data-banner="btn-next"></button>
-                <div class="controls-slider">
-                    <button class="controls-slider_item" data-banner="btn-control"></button>
-                    <button class="controls-slider_item" data-banner="btn-control"></button>
-                    <button class="controls-slider_item" data-banner="btn-control"></button>
-                    <button class="controls-slider_item" data-banner="btn-control"></button>
-                    <button class="controls-slider_item" data-banner="btn-control"></button>
-                    <button class="controls-slider_item" data-banner="btn-control"></button>
-                </div>
-                <div class="banner-slider" data-banner="slider">
-                    <div class="banner-slider_item" data-banner="item">
-                        <a class="banner-slider_link" href="/" >
-                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
-                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
-                        </a>
-                    </div>
-                    <div class="banner-slider_item" data-banner="item">
-                        <a class="banner-slider_link" href="/" >
-                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
-                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
-                        </a>
-                    </div>
-                    <div class="banner-slider_item" data-banner="item">
-                        <a class="banner-slider_link" href="/" >
-                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
-                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
-                        </a>
-                    </div>
-                    <div class="banner-slider_item" data-banner="item">
-                        <a class="banner-slider_link" href="/" >
-                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
-                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
-                        </a>
-                    </div>
-                    <div class="banner-slider_item" data-banner="item">
-                        <a class="banner-slider_link" href="/" >
-                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
-                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
-                        </a>
-                    </div>
-                    <div class="banner-slider_item" data-banner="item">
-                        <span class="banner-slider_counter">6</span>
-                        <a class="banner-slider_link" href="/" >
-                            <img class="banner-slider_cover" src="./assets/imgs/exemple/banner-exemple.jpeg" alt="Mandalorian"/>
-                            <img class="banner-slider_title" src="./assets/imgs/exemple/banner-title-exemple.png" alt="Mandalorian" data-banner="img-title"/>
-                        </a>
-                    </div>
-                </div>
+                <div class="controls-slider" data-banner="controls-slider"></div>
+                <div class="banner-slider" data-banner="slider"></div>
             </section>
+            <section class="categories">
+                <ul class="category-menu">
+                    <li class="category-menu_item">
+                        <video class="category-menu_video" src="./assets/videos/category-disney.mp4" autoplay loop muted></video>
+                        <a class="category-menu_link" href="/">
+                            <img class="category-menu_image" src="./assets/imgs/categories/disney.png" alt="Disney Logo"/>
+                        </a>
+                    </li>
+                    <li class="category-menu_item">
+                        <video class="category-menu_video" src="./assets/videos/category-pixar.mp4" autoplay loop muted></video>
+                        <a class="category-menu_link" href="/">
+                            <img class="category-menu_image" src="./assets/imgs/categories/pixar.png" alt="Pixar Logo"/>
+                        </a>
+                    </li>
+                    <li class="category-menu_item">
+                        <video class="category-menu_video" src="./assets/videos/category-marvel.mp4" autoplay loop muted></video>
+                        <a class="category-menu_link" href="/">
+                            <img class="category-menu_image" src="./assets/imgs/categories/marvel.png" alt="Marvel Logo"/>
+                        </a>
+                    </li>
+                    <li class="category-menu_item">
+                        <video class="category-menu_video" src="./assets/videos/category-star-wars.mp4" autoplay loop muted></video>
+                        <a class="category-menu_link" href="/">
+                            <img class="category-menu_image" src="./assets/imgs/categories/star-wars.png" alt="Star Wars Logo"/>
+                        </a>
+                    </li>
+                    <li class="category-menu_item">
+                        <video class="category-menu_video" src="./assets/videos/category-national-geographic.mp4" autoplay loop muted></video>
+                        <a class="category-menu_link" href="/">
+                            <img class="category-menu_image" src="./assets/imgs/categories/national-geographic.png" alt="National Geographic Logo"/>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="collections" data-carousel="collections"></section>
         </main>
+        <footer class="footer">
+            <div class="footer_wrapper">
+                <div class="logo">
+                    <a class="logo_link" href="/"></a>
+                </div>
+                <nav class="footer_navigation">
+                    <ul class="footer-menu">
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Política de Privacidade</a>
+                        </li>
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Proteção de Dados no Brasil</a>
+                        </li>
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Contrato de Assinatura</a>
+                        </li>
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Ajuda</a>
+                        </li>
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Dispositivos Compatíveis</a>
+                        </li>
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Sobre a Disney+</a>
+                        </li>
+                        <li class="footer-menu_item">
+                            <a class="footer-menu_link" href="/">Anúncios Personalizados</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="footer_about">
+                    Disney+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. 
+                    O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, 
+                    Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP - CEP 04578-903, Brasil e 
+                    CNPJ/M 73.042.962/0004-20
+                </p>
+                <p class="footer_copyright">
+                    &copy; Disney. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
     </div>
-    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>
